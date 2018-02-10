@@ -1,9 +1,8 @@
 #include "Robot.h"
 
-/**
- * Fonctions du robot
- **/
+////////////////////////////////////////////////////////////////////////////
 void Robot::next_move(BibliSample& bibli)
+////////////////////////////////////////////////////////////////////////////
 {
     switch(state)
     {
@@ -84,7 +83,16 @@ void Robot::next_move(BibliSample& bibli)
     };
 }
 
-void Robot::update(string target, int eta, int score, vector<int> storages, vector<int> expertises)
+////////////////////////////////////////////////////////////////////////////
+void Robot::update
+////////////////////////////////////////////////////////////////////////////
+(
+ string target,
+ int eta,
+ int score,
+ vector<int> storages,
+ vector<int> expertises
+)
 {
     this->target = target;
     this->eta = eta;
@@ -93,7 +101,9 @@ void Robot::update(string target, int eta, int score, vector<int> storages, vect
     this->expertises = expertises;
 }
 
+////////////////////////////////////////////////////////////////////////////
 vector<int> Robot::what_need(Sample s)
+////////////////////////////////////////////////////////////////////////////
 {
     vector<int> needed = {0, 0, 0, 0, 0};
     auto sample_mols = s.get_mols();

@@ -9,6 +9,7 @@ class Sample
         string gain;
         int health;
         vector<int> mols;
+        bool analyzed;
         
     public:
         Sample()
