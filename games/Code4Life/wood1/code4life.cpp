@@ -15,6 +15,7 @@ int main()
         int d;
         int e;
         cin >> a >> b >> c >> d >> e; cin.ignore();
+	cerr << a << " " << b << " " << c << " " << d << " " << e << endl;
     }
     ////////////////////
 
@@ -36,6 +37,7 @@ int main()
             int expertiseD;
             int expertiseE;
             cin >> target >> eta >> score >> storageA >> storageB >> storageC >> storageD >> storageE >> expertiseA >> expertiseB >> expertiseC >> expertiseD >> expertiseE; cin.ignore();
+	    cerr << target << " " << eta << " " << score << " " << storageA << " " << storageB << " " << storageC << " " << storageD << " " << storageE << " " << expertiseA << " " << expertiseB << " " << expertiseC << " " << expertiseD << " " << expertiseE << endl;
         
             if (i == 0)
                 robot.update(target, eta, score,
@@ -50,12 +52,14 @@ int main()
         int availableD;
         int availableE;
         cin >> availableA >> availableB >> availableC >> availableD >> availableE; cin.ignore();
+	cerr << availableA << " " << availableB << " " << availableC << " " << availableD << " " << availableE << endl;
+
         ////////////////////
 
         int sampleCount;
         cin >> sampleCount; cin.ignore();
+	cerr << sampleCount << endl;
         BibliSample bibli;
-
         for (int i = 0; i < sampleCount; i++) {
             int sampleId;
             int carriedBy;
@@ -68,12 +72,13 @@ int main()
             int costD;
             int costE;
             cin >> sampleId >> carriedBy >> rank >> expertiseGain >> health >> costA >> costB >> costC >> costD >> costE; cin.ignore();
+	    cerr << sampleId << " " << carriedBy << " " << rank << " " << expertiseGain << " " << health << " " << costA << " " << costB << " " << costC << " " << costD << " " << costE << endl;
         
             Sample sample(sampleId, carriedBy, rank, expertiseGain, health,
                           {costA, costB, costC, costD, costE});
             bibli.add_sample(sample);
         }
-        
+        cerr << "SIZE: " << bibli.get_samples().size() << endl; 
         robot.next_move(bibli);
     }
 }

@@ -13,12 +13,14 @@ Sample BibliSample::search_id(int id)
 Sample BibliSample::get_better()
 ////////////////////////////////////////////////////////////////////////////
 {
+    cerr << "Size: " << samples.size() << endl;
     Sample best_sample = samples[0];
     for (auto s: samples)
-        if (best_sample.get_carried() == 1 ||
+        if (best_sample.get_carried() == 1)
+			/*||
             (s.get_carried() == -1 &&
             best_sample.get_health() <= s.get_health() &&
-            best_sample.get_total_mols() <= s.get_total_mols()))
+            best_sample.get_total_mols() <= s.get_total_mols()))*/
             best_sample = s;
     return best_sample;
 }

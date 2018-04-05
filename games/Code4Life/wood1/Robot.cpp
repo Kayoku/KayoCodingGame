@@ -8,9 +8,21 @@ void Robot::next_move(BibliSample& bibli)
     {
       case Robot_State::ST_START:
       {
-        state = Robot_State::ST_DIAGNOSIS;
-        cout << "GOTO DIAGNOSIS" << endl;
+        state = Robot_State::ST_SAMPLES;
+        cout << "GOTO SAMPLES" << endl;
         break;
+      }
+      case Robot_State::ST_SAMPLES:
+      {
+	cout << "CONNECT 2" << endl;
+	state = Robot_State::ST_SAMPLES_DONE;
+	break;
+      }
+      case Robot_State::ST_SAMPLES_DONE:
+      {
+	state = Robot_State::ST_DIAGNOSIS;
+	cout << "GOTO DIAGNOSIS" << endl;
+	break;
       }
       case Robot_State::ST_DIAGNOSIS:
       {
