@@ -1,4 +1,4 @@
-#KayoCodingGame
+# KayoCodingGame
 
 Dépôt contenant le code pour la résolution des jeux sur www.codingame.com.
 
@@ -6,13 +6,13 @@ Dépôt contenant le code pour la résolution des jeux sur www.codingame.com.
 
 CGLocal permet de travailler en local sur sa machine tout en étant connecté à l'IDE du site web en parallèle. Grâce à un petit script (ici pour le C++), on peut rassembler tous les fichiers et le push sur l'IDE afin de tester sa solution.
 
-### Installation
+## Installation
   
 * Aller sur https://www.codingame.com/forum/t/cg-local/10359 et installer l'extension pour son navigateur.
 * Télécharger l'application sur le même lien (c'est un exécutable .jar qui est en fait déjà dans ce dépot, sous le répertoire CGLocal)
 * Eventuellement installer OpenJDK (sudo apt-get install openjfx)
 
-### Utilisation
+## Utilisation
 
 Pour lancer l'application, un petit script est prêt à être lancé : 
 
